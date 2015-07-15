@@ -1,8 +1,8 @@
 # graphite-cluster
 Dockerized components to run a graphite cluster. Composed of:
 * graphite-node: A series of carbon relays and a single graphite api, meant to be run on a single host.
-* graphite-relay: A carbon relay node. If running more than one carbon cache, cluster will require a relay node.
-* graphite-api: A graphite api node. If running multiple graphite-node instances, cluster will require an api node.
+* graphite-relay: A carbon relay node. If running more than one carbon cache, the cluster will require a relay node.
+* graphite-api: A graphite api node. If running multiple graphite-node instances, the cluster will require an api node.
 
 ### Single Node, Single Carbon Cache
 The simplest deployment. Good for testing, or if expected metrics load is small. In this scenario, only a single graphite-node is needed:
