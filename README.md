@@ -22,7 +22,7 @@ For larger write loads you can use multiple carbon caches on the same host. A co
 ```
 docker run -d -e CARBON_CONFIG={\"cache_count\":4} -v /opt/graphite/data:/opt/graphite/storage/whisper -p 80:80 -p 2014:2014 -p 2024:2024 -p 2034:2034 -p 2044:2044 ainsleyc/graphite-cluster-node
 ```
-In this setup a relay is needed, so to cache pickle ports need to be exposed withthe '-p' option. The pickle ports for multiple caches follow the pattern: [2014, 2024, 2034, ...]
+In this setup a relay is needed, so to cache pickle ports need to be exposed with the '-p' option. The pickle ports for multiple caches follow the pattern: [2014, 2024, 2034, ...]
 
 To run the relay:
 ```
