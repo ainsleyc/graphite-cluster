@@ -15,10 +15,10 @@ docker run -d -e CARBON_CONFIG={\"cache_count\":1} -v /opt/graphite/data:/opt/gr
   * Carbon pickle port (2014)
   * Graphite webapp (80)
 
-You can confirm that the node is working by visiting the api page (http://host:80) and checking if carbon/agents data is appearing in the host local path bound with the '-v' option.
+You can confirm that the node is working by visiting the api page (http://host:80) and checking if carbon/agents data is appearing in the local host path bound with the '-v' option.
 
 ### Single Node, Multiple Carbon Caches
-For larger write loads you can use multiple carbon caches on the same host. A common setup is a single cache for each cpu on the host. To run the node:
+For larger write loads you can use multiple carbon caches. A common setup is a single cache for each cpu on the host. To run the node:
 ```
 docker run -d -e CARBON_CONFIG={\"cache_count\":4} -v /opt/graphite/data:/opt/graphite/storage/whisper -p 80:80 -p 2014:2014 -p 2024:2024 -p 2034:2034 -p 2044:2044 ainsleyc/graphite-cluster-node
 ```
@@ -35,7 +35,7 @@ docker run -d -e CARBON_CONFIG={\"cache_hosts\":[{\"host\":\"192.168.0.10\"\,\"p
   * Carbon line port (2003)
   * Carbon pickle port (2004)
 
-You can confirm that the relay is working by checking if carbon/relays data is appearing in the host local path bound with the '-v' option.
+You can confirm that the relay is working by checking if carbon/relays data is appearing in the local host path bound with the '-v' option.
 
 ### Multiple Node, Multiple Carbon Caches
 TBD
